@@ -1,0 +1,45 @@
+﻿@model infodocker.Models.Example
+
+@{
+    ViewData["Title"] = "Create";
+}
+<body>
+    <div class="row info-section mt-4 mb-2 p-2">
+        <div class="col-12 m-0">
+            <h1>Create</h1>
+
+            <h4>Example</h4>
+            <hr />
+        </div>
+    </div>
+    <div class="row info-section mt-4 mb-2 p-2">
+        <div class="col-md-4 col-12 ml-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Birthday" class="control-label"></label>
+                    <input asp-for="Birthday" class="form-control" />
+                    <span asp-validation-for="Birthday" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-info" />
+                    <a asp-action="Index" class="btn btn-info">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>

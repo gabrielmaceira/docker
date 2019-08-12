@@ -1,0 +1,360 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/js/site.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/jquery.waypoints.min.js"></script>
+
+<body data-spy="scroll" data-target="#info-nav">
+    <div class="row info-section" id="section1">
+        <div class="row">
+            <div class="col-8 column align-self-center">
+                <h1>How to <i>“DOCKERIZE”</i> your ASP.NET CORE application</h1>
+            </div>
+            <div class="col-4 column slidedocker">
+                <img src="~/img/dockerandaspnet.png" class="img-fluid" />
+            </div>
+            <div class="col-12 column">
+                <p>
+                    If you’ve wondered how to use Docker with your ASP.NET Core application, or if you’ve
+                    researched but didn’t find a simple guide, this is the story for you!
+                </p>
+                <p>First, a few details:</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10">
+                <div class="card-deck text-center">
+                    <div class="card slide1 m-xs-0 m-sm-1">
+                        <img src="~/img/aspnetlogo.png" alt="" class="card-img-top img-fluid">
+                        <div class="card-body text-left">
+                            <p class="card-text">
+                                <b>ASP.NET</b> extends the .NET platform with tools and libraries specifically for building web apps.
+                            </p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Base framework for processing web requests</li>
+                                <li class="list-group-item">Web-page templating syntax, known as Razor, for building dynamic web pages using C#</li>
+                                <li class="list-group-item">Libraries for common web patterns, such as Model View Controller (MVC)</li>
+                                <li class="list-group-item">Authentication system that includes libraries, a database, and template pages for handling logins, including multi-factor authentication and external authentication with Google, Twitter, and more.</li>
+                                <li class="list-group-item">Editor extensions to provide syntax highlighting, code completion, and other functionality specifically for developing web pages</li>
+                            </ul>
+                            <a href="https://dotnet.microsoft.com/apps/aspnet" class="card-link btn btn-info btn-lg btn-block mt-auto">ASP.NET</a>
+                        </div>
+                    </div>
+                    <div class="card slide2 m-xs-0 m-sm-1">
+                        <img src="~/img/aspnetcorelogo.png" alt="" class="card-img-top img-fluid">
+                        <div class="card-body flex-column d-flex text-left">
+                            <p class="card-text">
+                                <b>ASP.NET Core</b> is the next generation of the ASP.NET web framework. It allows web apps to run in .NET Core or the full .NET framework.
+                            </p>
+                            <p class="card-text">
+                                <b>ASP.NET Core</b> is the open-source and cross-platform version of ASP.NET!
+                            </p>
+                            <a href="/Examples/" class="btn btn-info btn-lg btn-block mt-auto mb-2">Example</a>
+                            <a href="https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core" class="btn btn-info btn-lg btn-block mt-0">ASP.NET Core</a>
+                        </div>
+                    </div>
+                    <div class="card slide3 m-xs-0 m-sm-1">
+                        <img src="~/img/dockerlogo.png" alt="" class="card-img-top img-fluid">
+                        <div class="card-body flex-column d-flex text-left">
+                            <p class="card-text">
+                                <b>Docker</b> is a tool designed to make it easier to create, deploy, and run applications by using
+                                <a href="#container-docker" class="badge badge-info" style="padding: 6px;" data-toggle="collapse">containers</a>
+                            </p>
+                            <div class="collapse" id="container-docker">
+                                <div class="card-text">
+                                    <p>
+                                        Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies,
+                                        and ship it all out as one package, eliminating environment inconsistencies. They use less space than Virtual machines,
+                                        can handle more applications and require fewer VMs and Operating systems
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                There are two ways to use Docker:
+                            </p>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-sm-10 col-12">
+                                    <div class="card m-0 m-lg-1">
+                                        <div class="card-body">
+                                            <a href="https://hub.docker.com" style="text-decoration:none; color: inherit;">
+                                                <img src="~/img/dockerdesktop.png" alt="" class="card-img-top img-fluid">
+                                                <small class="card-text">Docker application for Mac or Windows 10 Pro or Enterprise 64 bits</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-10 col-12">
+                                    <div class="card m-0 m-lg-1">
+                                        <div class="card-body">
+                                            <a href="https://github.com/docker/toolbox/releases" style="text-decoration:none; color: inherit;">
+                                                <img src="~/img/dockertoolboxhero1.jpg" alt="" class="card-img-top img-fluid">
+                                                <small class="card-text">Docker Toolbox for legacy systems or running VirtualBox</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="https://docs.docker.com/" class="card-link btn btn-info btn-lg btn-block mt-auto">DOCKER</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row info-section justify-content-center " id="section2">
+        <div class="col-12 column section2">
+            <h1>Creating an ASP.NET Core project</h1>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#step1" class="nav-link active" data-toggle="tab">Step 1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#step2" class="nav-link" data-toggle="tab">Step 2</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#step3" class="nav-link" data-toggle="tab">Step 3</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="step1" role="tabpanel">
+                    <p>
+                        Using Visual Studio Code you can easily create an ASP.NET Core project by selecting New → Project…
+                    </p>
+                    <a data-toggle="modal" data-target="#modal">
+                        <img src="~/img/project-step1.png" class="img-fluid modal-img" />
+                    </a>
+                </div>
+                <div class="tab-pane" id="step2" role="tabpanel">
+                    <p>
+                        Then selecting ASP.NET Core Web Application, making sure to use the Name and Solution name you want.
+                    </p>
+                    <a data-toggle="modal" data-target="#modal">
+                        <img src="~/img/project-step2.png" class="img-fluid modal-img" />
+                    </a>
+                    <p>
+                        These values names should contain only lowercase letters as there are some issues picking up uppercase values from the Dockerfile.
+                    </p>
+                </div>
+                <div class="tab-pane" id="step3" role="tabpanel">
+                    <p>
+                        You’ll then select if you want a blank canvas to start your work, or one of the templates:
+                    </p>
+                    <a data-toggle="modal" data-target="#modal">
+                        <img src="~/img/project-step3.png" class="img-fluid modal-img" />
+                    </a>
+                    <p>
+                        <br />
+                        And you’re ready to start your project!
+                    </p>
+                </div>
+                <div class="modal" id="modal">
+                    <div class="modal-dialog modal-lg d-flex justify-content-center align-items-center">
+                        <div class="modal-content">
+                            <img src="" id="info-modal" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row info-section section3" id="section3">
+        <div class="row justify-content-center d-flex">
+            <div class="col-12 column">
+                <h1>Installing Docker</h1>
+                <p>
+                    If you’re using Windows 10 or Entreprise (64 bits) and not running VirtualBox, you can download the
+                    Docker desktop application after registering to the website. Or you can use Docker Toolbox!
+                </p>
+                <p>
+                    Once installed open Docker desktop, or the Docker Quickstart Terminal if using the Docker Toolbox
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-8 column text-center mb-4 mt-4">
+                <img src="~/img/docker-dialog.png" class="img-fluid" />
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex">
+            <div class="col-12 column">
+                <br />
+                <h1>Configuring your project with a Docker file</h1>
+                <p>
+                    On your application’s directory create a file named “Dockerfile” with no extension with the text below.
+                    This is the directory where the solution file is located (.sln)
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-8 code-block">
+                <code>
+                    FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build<br />
+                    WORKDIR /app<br /><br />
+                    # copy csproj and restore as distinct layers<br />
+                    COPY *.sln .<br />
+                    COPY infodocker/*.csproj ./infodocker/<br />
+                    RUN dotnet restore<br /><br />
+                    # copy everything else and build app<br />
+                    COPY infodocker/. ./infodocker/<br />
+                    WORKDIR /app/infodocker<br />
+                    RUN dotnet publish -c Release -o out<br /><br />
+                    FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime<br />
+                    WORKDIR /app<br />
+                    COPY --from=build /app/infodocker/out ./<br />
+                    ENTRYPOINT ["dotnet", "infodocker.dll"]<br />
+                </code>
+            </div>
+            <div class="col-12 column">
+                <br />
+                <p>This file now contains all the data for your app to run.</p>
+                <p>You should change:</p>
+                <ul>
+                    <li>“infodocker” to your app’s name i.e. “myapp”</li>
+                    <li>ASP.NET version can be changed from 2.2 to whatever’s needed</li>
+                </ul>
+            </div>
+            <div class="col-12 column">
+                <br />
+                <p>
+                    Now open the Docker Quickstart Terminal or Docker app, and navigate to the directory
+                    where you created the Dockerfile.
+                </p>
+                <p>In there, run the command:</p>
+            </div>
+            <div class="col-sm-12 col-md-8 code-block">
+                <code>docker build -t infodocker .</code>
+            </div>
+            <div class="col-12 column">
+                <br />
+                <p><b>infodocker</b> in this case will be the name of the image.</p>
+            </div>
+            <div class="col-sm-12 col-md-8 column text-center">
+                <img src="~/img/dockerbuild.png" class="img-fluid" />
+            </div>
+            <div class="col-12 column">
+                <br />
+                <p>
+                    Once that’s complete, if there are no errors, you can use the following command to confirm
+                    the image was created
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-8 code-block">
+                <code>docker images</code>
+            </div>
+            <div class="col-sm-12 col-md-10 column mt-4 mb-4 text-center">
+                <img src="~/img/dockerimages.png" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row info-section justify-content-center section4" id="section4">
+        <div class="col-12 column">
+            <h1>Running your app</h1>
+            <p>
+                Almost there! Using the command below you’ll be able to start the app
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-8 code-block">
+            <code>
+                docker run -d -p hostport:containerport imagename
+            </code>
+        </div>
+        <div class="col-12 column">
+            <br />
+            <p>
+                In my example
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-8 code-block">
+            <code>
+                docker run -d -p 8000:80 infodocker
+            </code>
+        </div>
+        <div class="col-sm-12 col-md-10 column mt-4 mb-4 text-center">
+            <img src="~/img/dockerrun.png" class="img-fluid" />
+        </div>
+        <div class="col-12 column">
+            <br />
+            <p>
+                In case there are any port errors (any of the ports are used)
+                you’ll receive an error message like so:
+            </p>
+        </div>
+        <div class="col-sm-12 col-md-10 column mt-4 mb-4 text-center">
+            <img src="~/img/dockerrunerror.png" class="img-fluid" />
+        </div>
+        <div class="col-12 column">
+            <br />
+            <p>
+                For the final step, if you’re using the Docker desktop application
+                you’ll be able to reach your website using localhost:hostport (localhost:8000 in this example).
+            </p>
+            <p>If you’re using Docker Toolbox you’ll need to check the IP assigned to the container</p>
+        </div>
+        <div class="col-sm-12 col-md-10 column mt-4 mb-4 text-center">
+            <img src="~/img/dockermachineip.png" class="img-fluid" />
+        </div>
+        <div class="col-12 column">
+            <br />
+            <p>
+                So by accessing 192.168.99.100:8000 on your browser the website will be reachable!
+            </p>
+        </div>
+    </div>
+
+    <div class="row info-section" id="section5">
+        <div class="row justify-content-center d-flex">
+            <div class="col-12 column section5-title">
+                <h1>Docs</h1>
+            </div>
+            <div class="col-12 column section5-body">
+                <p>
+                    For more information about Docker you can use their documentation:
+                </p>
+                <a href="https://docs.docker.com" class="btn-lg btn-info" style="text-decoration:none">Docker Documentation</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $('.slidedocker').waypoint(function () {
+            $('.slidedocker').addClass('slide-animate');
+        }, { offset: '60%' });
+
+        $('.slide1').waypoint(function () {
+            $('.slide1').addClass('slide-animate');
+        }, { offset: '50%' });
+
+        $('.slide2').waypoint(function () {
+            $('.slide2').addClass('slide-animate');
+        }, { offset: '50%' });
+
+        $('.slide3').waypoint(function () {
+            $('.slide3').addClass('slide-animate');
+        }, { offset: '50%' });
+
+        $('.section2').waypoint(function () {
+            $('.section2').addClass('slide-animate');
+        }, { offset: '60%' });
+
+        $('.section3').waypoint(function () {
+            $('.section3').addClass('slide-animate');
+        }, { offset: '60%' });
+
+        $('.section4').waypoint(function () {
+            $('.section4').addClass('slide-animate');
+        }, { offset: '60%' });
+
+        $('.section5-title').waypoint(function () {
+            $('.section5-title').addClass('slide-animate-left');
+        }, { offset: '90%' });
+
+        $('.section5-body').waypoint(function () {
+            $('.section5-body').addClass('slide-animate-right');
+        }, { offset: '90%' });
+
+    </script>
+</body>
